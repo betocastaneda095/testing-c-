@@ -1,16 +1,21 @@
-Main.cpp
 #include <iostream>
+#include <string>
+
 int main() {
-    int edad = 31; 
-    std::string nombre; //Aquí estoy declarando una variable del tipo string, es la nueva forma
-    std::cin>> nombre; //Aquí se va a guardar el valor que el usuario ingrese.
-    if(edad>=18)
-    {
-        std::cout<<"Bienvenido"<<" "<<nombre<<std::endl; //Salto de línea con flush
+    int edad;
+    std::string nombre;
+
+    std::cout << "Introduce tu nombre: ";
+    std::cin >> nombre;
+
+    std::cout << "Introduce tu edad: ";
+    std::cin >> edad;
+
+    if (edad >= 18) {
+        std::cout << "Bienvenido " << nombre << std::endl;
+    } else {
+        std::cout << "Lo siento " << nombre << ", no puedes ingresar\n";
     }
-    else
-    {
-        std::cout<<"Lo siento"<<" "<<nombre<<" "<<"no puedes ingresar"<<"\n"; //otra forna m{as eficiente de hacer el salto de línea
-    }
-return 0;
+
+    return 0;
 }
